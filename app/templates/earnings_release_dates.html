@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Earnings Release Dates
+{% endblock %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/earnings_release_dates.css') }}">
+{% endblock %}
+
+{% block main %}
+    <div class="ticker-selection">
+        <h2>Select tickers</h2>
+
+        <div class="btn-group">
+            <button type="button" id="selectAllBtn" class="">Select All</button>
+            <button type="button" id="deselectAllBtn" class="">Deselect All</button>
+            <button type="button" id="fetchBtn" class="">Get Earnings Dates</button>
+          </div>
+
+        <div id="checkboxes" class="checkbox-list">
+            {% for ticker in tickers %}
+                <label class="checkbox-item">
+                    <input type="checkbox" name="selected_tickers" value="{{ ticker }}">
+                    {{ ticker }}
+                </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- loading icon -->
+    <div class="loader" style="display: none"></div>
+
+    <!-- table to populate -->
+    <table id="earningsTable" style="display: none">
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Earnings Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- Rows will be inserted here -->
+        </tbody>
+    </table>    
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/earningsReleaseDates.js') }}"></script>
+{% endblock %}
