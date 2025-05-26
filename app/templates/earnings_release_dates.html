@@ -1,10 +1,16 @@
+<!-- 
+Author: Heath Dyer
+
+Earning release dates tool page. Inherets generic layout
+-->
 {% extends 'layout.html' %}
 
+<!-- page title -->
 {% block title %}
 Earnings Release Dates
 {% endblock %}
 
-
+<!-- link style sheets -->
 {% block style %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/earnings_release_dates.css') }}">
 {% endblock %}
@@ -13,12 +19,14 @@ Earnings Release Dates
     <div class="ticker-selection">
         <h2>Select tickers</h2>
 
+        <!-- options -->
         <div class="btn-group">
             <button type="button" id="selectAllBtn" class="">Select All</button>
             <button type="button" id="deselectAllBtn" class="">Deselect All</button>
             <button type="button" id="fetchBtn" class="">Get Earnings Dates</button>
           </div>
 
+          <!-- checkbox list -->
         <div id="checkboxes" class="checkbox-list">
             {% for ticker in tickers %}
                 <label class="checkbox-item">

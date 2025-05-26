@@ -1,3 +1,10 @@
+/*
+author: Heath Dyer
+
+Front-end scripts for Earnings Release Dates tool. Requests to
+API to dynamically load infromation based on user input
+*/
+
 const selectAllBtn = document.getElementById('selectAllBtn');
 const deselectAllBtn = document.getElementById('deselectAllBtn');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');

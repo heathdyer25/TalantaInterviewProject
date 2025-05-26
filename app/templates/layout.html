@@ -1,3 +1,8 @@
+<!-- 
+General layout for web app. Sections can be overriden using the
+Jinja2 templating engine.
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +11,12 @@
     {% block style %}{% endblock %}
 </head>
 <body>
+    <!-- header section  -->
     <header>
         {% block header %}
             <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Company Logo">
 
+            <!-- nav bar -->
             <div id="navbar">
                 <a class="nav-item" href="/">Home</a>
                 <div class="nav-item dropdown">
@@ -19,21 +26,25 @@
                     </div>
                 </div>
             </div>
+            <!-- end navbar -->
         {% endblock %}
     </header>
 
+    <!-- main content of the page, override this section -->
     <main>
         {% block main %}
             <p>Default page content from some home page.</p>
         {% endblock %}
     </main>
 
+    <!-- footer -->
     <footer>
         {% block footer %}
             <p>© 2025 Talanta Investment Group, LLC All Rights Reserved.</p>
         {% endblock %}
     </footer>
 
+    <!-- override to add any additional scripts to webpage -->
     {% block scripts %}{% endblock %}
 </body>
 </html>
