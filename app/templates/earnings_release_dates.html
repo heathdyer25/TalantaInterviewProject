@@ -16,15 +16,20 @@ Earnings Release Dates
 {% endblock %}
 
 {% block main %}
+    <h1>Earnings Release Dates</h1>
     <div class="ticker-selection">
-        <h2>Select tickers</h2>
+        <h2>Select Symbol</h2>
 
-        <!-- options -->
         <div class="btn-group">
-            <button type="button" id="selectAllBtn" class="">Select All</button>
-            <button type="button" id="deselectAllBtn" class="">Deselect All</button>
+            <button type="button" id="selectAllBtn">Select All</button>
+            <button type="button" id="deselectAllBtn">Deselect All</button>
             <button type="button" id="fetchBtn" class="">Get Earnings Dates</button>
-          </div>
+        </div>
+
+        <div class="btn-group">
+            <input type="text" id="searchInput" placeholder="Search by symbol..." class="search-bar" />
+        </div>
+
 
           <!-- checkbox list -->
         <div id="checkboxes" class="checkbox-list">
@@ -44,7 +49,7 @@ Earnings Release Dates
     <table id="earningsTable" style="display: none">
         <thead>
             <tr>
-                <th>Ticker</th>
+                <th>Symbol</th>
                 <th>Earnings Date</th>
             </tr>
         </thead>

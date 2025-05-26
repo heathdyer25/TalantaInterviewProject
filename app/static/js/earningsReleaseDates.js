@@ -122,10 +122,28 @@ function sortTable(column) {
     rows.forEach(row => tbody.appendChild(row));
 }
 
-// Attach event listeners
+// when document is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const headers = document.querySelectorAll('#earningsTable th');
+    // add filter functions
     headers[0].addEventListener('click', () => sortTable('ticker'));
     headers[1].addEventListener('click', () => sortTable('earnings_date'));
+
+    const searchInput = document.getElementById('searchInput');
+    const checkboxes = document.querySelectorAll('#checkboxes .checkbox-item');
+
+    // add search bar functionality
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+
+        checkboxes.forEach(label => {
+            const ticker = label.textContent.toLowerCase();
+            if (ticker.includes(query)) {
+                label.style.display = '';
+            } else {
+                label.style.display = 'none';
+            }
+        });
+    });
 });
 

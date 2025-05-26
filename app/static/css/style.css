@@ -127,3 +127,30 @@ footer {
     box-shadow: none;
     transform: none;
 }
+
+/* Style for the search input */
+.search-bar {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1; /* Tailwind slate-300 */
+    border-radius: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-bar:focus {
+    border-color: #2563eb; /* Tailwind blue-600 */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Flex layout for the btn-group to align input and buttons */
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}

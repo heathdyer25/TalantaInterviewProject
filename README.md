@@ -37,16 +37,16 @@ localhost:5000
 * [FR 1.0] The system shall display a dropdown list of predefined companies' ticker symbols (ex. APPL, MSFT, AMZN, GOOGL, NVDA).
 * [FR 1.1] The system shall allow the user to select one or more companies from the list.
 * [FR 1.2] The system shall allow the user to select all or deselect all companies from the list at once.
-* [FR 1.3] The system shall retrieve the next upcoming earnings release date for all selected companies when the user submits the form.
-* [FR 1.4] The system shall display the earnings date in a table format.
-* [FR 1.5] The system shall allow the user to sort the table by the company name or the release date.
+* [FR 1.3] The system shall allow the user to search for a specific ticker symbol, also filtering out other symbols.
+* [FR 2.1] The system shall retrieve the next upcoming earnings release date for all selected companies when the user submits the form.
+* [FR 2.2] The system shall display the earnings date in a table format.
+* [FR 2.3] The system shall allow the user to sort the table by the company name or the release date.
 
 ### Non-Functional Requirements
 
 * [NFR 1.0] The application must be developed with a Python backend.
 * [NFR 1.1] The application must use publicly available platforms (ex. Yahoo Finance)
-* [NFR 1.2] The system shall respond to user requests within 2 seconds under normal load
-* [NFR 1.3] The system must be accessible via a standard web browser
+* [NFR 1.2] The system must be accessible via a standard web browser
 
 # Design
 
@@ -74,23 +74,8 @@ Example output
   "AAPL",
   "MSFT",
   "GOOGL",
+  ...
   "AMZN",
-  "TSLA",
-  "META",
-  "NVDA",
-  "JPM",
-  "V",
-  "JNJ",
-  "WMT",
-  "PG",
-  "MA",
-  "DIS",
-  "HD",
-  "BAC",
-  "PEP",
-  "KO",
-  "XOM",
-  "NFLX"
 ]
 ```
 
