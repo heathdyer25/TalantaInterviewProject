@@ -2,9 +2,33 @@
 
 ### Author: Heath Dyer
 
-### Directions
+### Project Overview
+
+## Directions
 
 Please build a simple website interface (UI) with a Python backend that retrieves upcoming earnings release dates for a small set of companies of your choosing. The data should be sourced from publicly available platforms such as Yahoo Finance or similar.
+
+## Quick Start
+
+1. Clone the repository and navigate to project folder
+```
+git clone https://github.com/heathdyer25/TalantaInterviewProject.git
+cd TalantaInterviewProject
+```
+2. Install python dependencies
+```
+pip install -r requirements.txt
+```
+3. Run the application via the run.py script
+```
+python run.py
+```
+4. The application will be hosted on your local machine at port 5000. In your browser, access the application at URL
+```
+localhost:5000
+```
+
+
 
 # Requirements
 
